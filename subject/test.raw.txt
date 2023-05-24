@@ -1,0 +1,390 @@
+packageHeader
+  PACKAGE >>>package<<< (DEFAULT_TOKEN_CHANNEL)
+  WS >>> <<< (HIDDEN)
+  identifier
+    simpleIdentifier
+      Identifier >>>com<<< (DEFAULT_TOKEN_CHANNEL)
+    DOT >>>.<<< (DEFAULT_TOKEN_CHANNEL)
+    simpleIdentifier
+      Identifier >>>example<<< (DEFAULT_TOKEN_CHANNEL)
+    DOT >>>.<<< (DEFAULT_TOKEN_CHANNEL)
+    simpleIdentifier
+      Identifier >>>android_ta<<< (DEFAULT_TOKEN_CHANNEL)
+  semi
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+\n */<<< (COMMENT)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+classDeclaration
+  CLASS >>>class<<< (DEFAULT_TOKEN_CHANNEL)
+  WS >>> <<< (HIDDEN)
+  simpleIdentifier
+    Identifier >>>Test<<< (DEFAULT_TOKEN_CHANNEL)
+  WS >>> <<< (HIDDEN)
+  classBody
+    LCURL >>>{<<< (DEFAULT_TOKEN_CHANNEL)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+    WS >>> <<< (HIDDEN)
+    WS >>> <<< (HIDDEN)
+    WS >>> <<< (HIDDEN)
+    WS >>> <<< (HIDDEN)
+    classMemberDeclarations
+      classMemberDeclaration
+        companionObject
+          COMPANION >>>companion<<< (DEFAULT_TOKEN_CHANNEL)
+          WS >>> <<< (HIDDEN)
+          OBJECT >>>object<<< (DEFAULT_TOKEN_CHANNEL)
+          WS >>> <<< (HIDDEN)
+          classBody
+            LCURL >>>{<<< (DEFAULT_TOKEN_CHANNEL)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            classMemberDeclarations
+              classMemberDeclaration
+                declaration
+                  functionDeclaration
+                    FUN >>>fun<<< (DEFAULT_TOKEN_CHANNEL)
+                    WS >>> <<< (HIDDEN)
+                    simpleIdentifier
+                      Identifier >>>testFunction<<< (DEFAULT_TOKEN_CHANNEL)
+                    functionValueParameters
+                      LPAREN >>>(<<< (DEFAULT_TOKEN_CHANNEL)
+                      functionValueParameter
+                        parameter
+                          simpleIdentifier
+                            Identifier >>>x<<< (DEFAULT_TOKEN_CHANNEL)
+                          COLON >>>:<<< (DEFAULT_TOKEN_CHANNEL)
+                          Inside_WS >>> <<< (HIDDEN)
+                          type
+                            typeReference
+                              userType
+                                simpleUserType
+                                  simpleIdentifier
+                                    Identifier >>>Int<<< (DEFAULT_TOKEN_CHANNEL)
+                      COMMA >>>,<<< (DEFAULT_TOKEN_CHANNEL)
+                      Inside_WS >>> <<< (HIDDEN)
+                      functionValueParameter
+                        parameter
+                          simpleIdentifier
+                            Identifier >>>y<<< (DEFAULT_TOKEN_CHANNEL)
+                          COLON >>>:<<< (DEFAULT_TOKEN_CHANNEL)
+                          Inside_WS >>> <<< (HIDDEN)
+                          type
+                            typeReference
+                              userType
+                                simpleUserType
+                                  simpleIdentifier
+                                    Identifier >>>Int<<< (DEFAULT_TOKEN_CHANNEL)
+                      RPAREN >>>)<<< (DEFAULT_TOKEN_CHANNEL)
+                    COLON >>>:<<< (DEFAULT_TOKEN_CHANNEL)
+                    WS >>> <<< (HIDDEN)
+                    type
+                      typeReference
+                        userType
+                          simpleUserType
+                            simpleIdentifier
+                              Identifier >>>Int<<< (DEFAULT_TOKEN_CHANNEL)
+                    WS >>> <<< (HIDDEN)
+                    functionBody
+                      block
+                        LCURL >>>{<<< (DEFAULT_TOKEN_CHANNEL)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        statements
+                          statement
+                            expression
+                              disjunction
+                                conjunction
+                                  equality
+                                    comparison
+                                      genericCallLikeComparison
+                                        infixOperation
+                                          elvisExpression
+                                            infixFunctionCall
+                                              rangeExpression
+                                                additiveExpression
+                                                  multiplicativeExpression
+                                                    asExpression
+                                                      prefixUnaryExpression
+                                                        postfixUnaryExpression
+                                                          primaryExpression
+                                                            jumpExpression
+                                                              RETURN >>>return<<< (DEFAULT_TOKEN_CHANNEL)
+                                                              WS >>> <<< (HIDDEN)
+                                                              expression
+                                                                disjunction
+                                                                  conjunction
+                                                                    equality
+                                                                      comparison
+                                                                        genericCallLikeComparison
+                                                                          infixOperation
+                                                                            elvisExpression
+                                                                              infixFunctionCall
+                                                                                rangeExpression
+                                                                                  additiveExpression
+                                                                                    multiplicativeExpression
+                                                                                      asExpression
+                                                                                        prefixUnaryExpression
+                                                                                          postfixUnaryExpression
+                                                                                            primaryExpression
+                                                                                              ifExpression
+                                                                                                IF >>>if<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                LPAREN >>>(<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                expression
+                                                                                                  disjunction
+                                                                                                    conjunction
+                                                                                                      equality
+                                                                                                        comparison
+                                                                                                          genericCallLikeComparison
+                                                                                                            infixOperation
+                                                                                                              elvisExpression
+                                                                                                                infixFunctionCall
+                                                                                                                  rangeExpression
+                                                                                                                    additiveExpression
+                                                                                                                      multiplicativeExpression
+                                                                                                                        asExpression
+                                                                                                                          prefixUnaryExpression
+                                                                                                                            postfixUnaryExpression
+                                                                                                                              primaryExpression
+                                                                                                                                simpleIdentifier
+                                                                                                                                  Identifier >>>x<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                          Inside_WS >>> <<< (HIDDEN)
+                                                                                                          comparisonOperator
+                                                                                                            RANGLE >>>><<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                          Inside_WS >>> <<< (HIDDEN)
+                                                                                                          genericCallLikeComparison
+                                                                                                            infixOperation
+                                                                                                              elvisExpression
+                                                                                                                infixFunctionCall
+                                                                                                                  rangeExpression
+                                                                                                                    additiveExpression
+                                                                                                                      multiplicativeExpression
+                                                                                                                        asExpression
+                                                                                                                          prefixUnaryExpression
+                                                                                                                            postfixUnaryExpression
+                                                                                                                              primaryExpression
+                                                                                                                                literalConstant
+                                                                                                                                  IntegerLiteral >>>0<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                RPAREN >>>)<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                controlStructureBody
+                                                                                                  statement
+                                                                                                    expression
+                                                                                                      disjunction
+                                                                                                        conjunction
+                                                                                                          equality
+                                                                                                            comparison
+                                                                                                              genericCallLikeComparison
+                                                                                                                infixOperation
+                                                                                                                  elvisExpression
+                                                                                                                    infixFunctionCall
+                                                                                                                      rangeExpression
+                                                                                                                        additiveExpression
+                                                                                                                          multiplicativeExpression
+                                                                                                                            asExpression
+                                                                                                                              prefixUnaryExpression
+                                                                                                                                postfixUnaryExpression
+                                                                                                                                  primaryExpression
+                                                                                                                                    simpleIdentifier
+                                                                                                                                      Identifier >>>x<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                          WS >>> <<< (HIDDEN)
+                                                                                                                          additiveOperator
+                                                                                                                            ADD >>>+<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                          WS >>> <<< (HIDDEN)
+                                                                                                                          multiplicativeExpression
+                                                                                                                            asExpression
+                                                                                                                              prefixUnaryExpression
+                                                                                                                                postfixUnaryExpression
+                                                                                                                                  primaryExpression
+                                                                                                                                    simpleIdentifier
+                                                                                                                                      Identifier >>>y<<< (DEFAULT_TOKEN_CHANNEL)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                ELSE >>>else<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                controlStructureBody
+                                                                                                  statement
+                                                                                                    expression
+                                                                                                      disjunction
+                                                                                                        conjunction
+                                                                                                          equality
+                                                                                                            comparison
+                                                                                                              genericCallLikeComparison
+                                                                                                                infixOperation
+                                                                                                                  elvisExpression
+                                                                                                                    infixFunctionCall
+                                                                                                                      rangeExpression
+                                                                                                                        additiveExpression
+                                                                                                                          multiplicativeExpression
+                                                                                                                            asExpression
+                                                                                                                              prefixUnaryExpression
+                                                                                                                                postfixUnaryExpression
+                                                                                                                                  primaryExpression
+                                                                                                                                    ifExpression
+                                                                                                                                      IF >>>if<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      LPAREN >>>(<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                      expression
+                                                                                                                                        disjunction
+                                                                                                                                          conjunction
+                                                                                                                                            equality
+                                                                                                                                              comparison
+                                                                                                                                                genericCallLikeComparison
+                                                                                                                                                  infixOperation
+                                                                                                                                                    elvisExpression
+                                                                                                                                                      infixFunctionCall
+                                                                                                                                                        rangeExpression
+                                                                                                                                                          additiveExpression
+                                                                                                                                                            multiplicativeExpression
+                                                                                                                                                              asExpression
+                                                                                                                                                                prefixUnaryExpression
+                                                                                                                                                                  postfixUnaryExpression
+                                                                                                                                                                    primaryExpression
+                                                                                                                                                                      simpleIdentifier
+                                                                                                                                                                        Identifier >>>y<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                                Inside_WS >>> <<< (HIDDEN)
+                                                                                                                                                comparisonOperator
+                                                                                                                                                  RANGLE >>>><<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                                Inside_WS >>> <<< (HIDDEN)
+                                                                                                                                                genericCallLikeComparison
+                                                                                                                                                  infixOperation
+                                                                                                                                                    elvisExpression
+                                                                                                                                                      infixFunctionCall
+                                                                                                                                                        rangeExpression
+                                                                                                                                                          additiveExpression
+                                                                                                                                                            multiplicativeExpression
+                                                                                                                                                              asExpression
+                                                                                                                                                                prefixUnaryExpression
+                                                                                                                                                                  postfixUnaryExpression
+                                                                                                                                                                    primaryExpression
+                                                                                                                                                                      literalConstant
+                                                                                                                                                                        IntegerLiteral >>>0<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                      RPAREN >>>)<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      controlStructureBody
+                                                                                                                                        statement
+                                                                                                                                          expression
+                                                                                                                                            disjunction
+                                                                                                                                              conjunction
+                                                                                                                                                equality
+                                                                                                                                                  comparison
+                                                                                                                                                    genericCallLikeComparison
+                                                                                                                                                      infixOperation
+                                                                                                                                                        elvisExpression
+                                                                                                                                                          infixFunctionCall
+                                                                                                                                                            rangeExpression
+                                                                                                                                                              additiveExpression
+                                                                                                                                                                multiplicativeExpression
+                                                                                                                                                                  asExpression
+                                                                                                                                                                    prefixUnaryExpression
+                                                                                                                                                                      postfixUnaryExpression
+                                                                                                                                                                        primaryExpression
+                                                                                                                                                                          simpleIdentifier
+                                                                                                                                                                            Identifier >>>x<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                                                  WS >>> <<< (HIDDEN)
+                                                                                                                                                                  multiplicativeOperator
+                                                                                                                                                                    MULT >>>*<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                                                  WS >>> <<< (HIDDEN)
+                                                                                                                                                                  asExpression
+                                                                                                                                                                    prefixUnaryExpression
+                                                                                                                                                                      postfixUnaryExpression
+                                                                                                                                                                        primaryExpression
+                                                                                                                                                                          simpleIdentifier
+                                                                                                                                                                            Identifier >>>y<<< (DEFAULT_TOKEN_CHANNEL)
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      ELSE >>>else<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                      WS >>> <<< (HIDDEN)
+                                                                                                                                      controlStructureBody
+                                                                                                                                        statement
+                                                                                                                                          expression
+                                                                                                                                            disjunction
+                                                                                                                                              conjunction
+                                                                                                                                                equality
+                                                                                                                                                  comparison
+                                                                                                                                                    genericCallLikeComparison
+                                                                                                                                                      infixOperation
+                                                                                                                                                        elvisExpression
+                                                                                                                                                          infixFunctionCall
+                                                                                                                                                            rangeExpression
+                                                                                                                                                              additiveExpression
+                                                                                                                                                                multiplicativeExpression
+                                                                                                                                                                  asExpression
+                                                                                                                                                                    prefixUnaryExpression
+                                                                                                                                                                      postfixUnaryExpression
+                                                                                                                                                                        primaryExpression
+                                                                                                                                                                          simpleIdentifier
+                                                                                                                                                                            Identifier >>>x<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                                                                                additiveOperator
+                                                                                                                                                                  SUB >>>-<<< (DEFAULT_TOKEN_CHANNEL)
+                                                                                                                                                                WS >>> <<< (HIDDEN)
+                                                                                                                                                                multiplicativeExpression
+                                                                                                                                                                  asExpression
+                                                                                                                                                                    prefixUnaryExpression
+                                                                                                                                                                      postfixUnaryExpression
+                                                                                                                                                                        primaryExpression
+                                                                                                                                                                          simpleIdentifier
+                                                                                                                                                                            Identifier >>>y<<< (DEFAULT_TOKEN_CHANNEL)
+                          semis
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        WS >>> <<< (HIDDEN)
+                        RCURL >>>}<<< (DEFAULT_TOKEN_CHANNEL)
+              semis
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            WS >>> <<< (HIDDEN)
+            RCURL >>>}<<< (DEFAULT_TOKEN_CHANNEL)
+      semis
+\n<<< (DEFAULT_TOKEN_CHANNEL)
+    RCURL >>>}<<< (DEFAULT_TOKEN_CHANNEL)

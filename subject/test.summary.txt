@@ -1,0 +1,9 @@
+PackageHeader(com.example.android_ta)
+importList
+KlassDeclaration(class TestVersion)
+  classBody
+    KlassDeclaration(companion object)
+      classBody
+        KlassDeclaration(fun testFunction Int)
+          KlassDeclaration(parameter x Int)
+          KlassDeclaration(parameter y Int)
