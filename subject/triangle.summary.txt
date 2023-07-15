@@ -1,0 +1,8 @@
+PackageHeader(com.example.android_ta)
+importList
+KlassDeclaration(class Triangle)
+  classBody
+    KlassDeclaration(fun checkTriangleValidity String)
+      KlassDeclaration(parameter a Int)
+      KlassDeclaration(parameter b Int)
+      KlassDeclaration(parameter c Int)

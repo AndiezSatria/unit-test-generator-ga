@@ -1,0 +1,6 @@
+PackageHeader(com.example.android_ta)
+importList
+KlassDeclaration(class NthFibonacci)
+  classBody
+    KlassDeclaration(fun nthFibonacci Int)
+      KlassDeclaration(parameter n Int)

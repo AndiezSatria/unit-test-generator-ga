@@ -1,6 +1,6 @@
-from code_recognition import *
 import sys
 sys.path.insert(0, 'recognition')
+from code_recognition import *
 
 _default_token = "(DEFAULT_TOKEN_CHANNEL)"
 
@@ -32,7 +32,10 @@ def class_body_recognition(summary_text: str, raw_text: str):
     elif class_type == "abstract":
         type = ClassType.ABSTRACT
 
+    index = summary_text.find("companion object")
     class_body = ClassBody(class_name, type=type)
+    if index != -1 or type == ClassType.OBJECT:
+        class_body.is_companion = True
 
     index_class_body = summary_text[index_braces:].find(
         "classBody") + index_braces

@@ -11,11 +11,11 @@ class Declaration(Enum):
     VAL = "val"
 
 class Statement:
-    variables = []
-    literals = []
-    expressions = []
-    declaration = None
-    is_return = False
+    variables: list[any] = []
+    literals: list[str] = []
+    expressions: list[str] = []
+    declaration: Declaration = None
+    is_return: bool = False
     branch_condition = None
     branch_expressions = []
 
@@ -42,9 +42,9 @@ class Parameter:
 
 class Function:
     name = ""
-    params = []
+    params: list[Parameter] = []
     statements = []
-    branch = 0
+    branch: int = 0
     return_value = None
     return_nullable = False
 
@@ -61,14 +61,16 @@ class Function:
 class ClassBody:
     name = ""
     type: ClassType = None
-    params = []
+    is_companion: bool = False
+    params: list[Parameter] = []
     functions: list[Function] = []
 
-    def __init__(self, name, params=[], functions=[], type:ClassType = None) -> None:
+    def __init__(self, name, params=[], functions=[], type:ClassType = None, is_companion=False) -> None:
         self.name = name
         self.params = params
         self.functions = functions 
         self.type = type 
+        self.is_companion = is_companion
 
 class File:
     package = ""

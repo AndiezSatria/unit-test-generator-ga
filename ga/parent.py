@@ -3,7 +3,7 @@ sys.path.append('../output')
 from output.assertion import *
 
 class Parent():
-    assertions = []
+    assertions: list[Assertion] = []
     tag: str = ""
     branch: int = 1
     branch_coverage: float = 0.0
@@ -16,7 +16,7 @@ class Parent():
         
 
 class ClassParent():
-    parents = []
+    parents: list[Parent] = []
     branch_coverage: float = 0.0
 
     def __init__(self):

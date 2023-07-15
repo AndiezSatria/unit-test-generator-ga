@@ -1,0 +1,6 @@
+PackageHeader(com.example.android_ta)
+importList
+KlassDeclaration(object Integer)
+  classBody
+    KlassDeclaration(fun isPrime Boolean)
+      KlassDeclaration(parameter n Int)

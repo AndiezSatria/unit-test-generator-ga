@@ -1,6 +1,0 @@
-PackageHeader(com.example.android_ta)
-importList
-KlassDeclaration(object UnitFunction)
-  classBody
-    KlassDeclaration(fun isOdd Boolean)
-      KlassDeclaration(parameter number Int)
