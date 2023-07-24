@@ -11,11 +11,16 @@ sys.path.append('output')
 
 
 def main():
+    # Fill with information for raw AST, summary AST, and unit test file name
+    summary = "./subject/CHANGE_THIS.summary.txt"
+    raw = "./subject/CHANGE_THIS.raw.txt"
+    file_name = "CHANGE_THIS"
+
     summary_text = ""
     raw_text = ""
-    with open("./subject/integer.summary.txt", "r") as f:
+    with open(summary, "r") as f:
         summary_text = f.read()
-    with open("./subject/integer.raw.txt", "r") as f:
+    with open(raw, "r") as f:
         raw_text = f.read()
 
     file_kt = file_recognition(summary_text, raw_text)
@@ -39,7 +44,7 @@ def main():
         print(parent.branch_coverage)
 
     print_to_file(class_body=file_kt.class_body, class_parent=class_parent,
-                  package=file_kt.package, file_name=file_kt.class_body.name + "TestTwo", is_companion=file_kt.class_body.is_companion)
+                  package=file_kt.package, file_name=file_kt.class_body.name + file_name, is_companion=file_kt.class_body.is_companion)
 
 
 if __name__ == "__main__":
