@@ -12,9 +12,9 @@ sys.path.append('output')
 
 def main():
     # Fill with information for raw AST, summary AST, and unit test file name
-    summary = "./subject/CHANGE_THIS.summary.txt"
-    raw = "./subject/CHANGE_THIS.raw.txt"
-    file_name = "CHANGE_THIS"
+    summary = "./subject/demo.summary.txt"
+    raw = "./subject/demo.raw.txt"
+    file_name = "Demo"
 
     summary_text = ""
     raw_text = ""
@@ -32,16 +32,16 @@ def main():
     ga = GeneticAlgorithm(class_name=file_kt.class_body.name,
                           functions=file_kt.class_body.functions, 
                           iteration=100, 
-                          parent_count=8, 
+                          parent_count=5,
                           is_companion=file_kt.class_body.is_companion, 
-                          max_generation=7,
+                          max_generation=5,
                           class_type=file_kt.class_body.type)
     ga.do_process()
     class_parent = ga.get_best_parent()
-    print(class_parent.branch_coverage)
+    print(class_parent.coverage)
     for parent in class_parent.parents:
         print(len(parent.assertions))
-        print(parent.branch_coverage)
+        print(parent.coverage)
 
     print_to_file(class_body=file_kt.class_body, class_parent=class_parent,
                   package=file_kt.package, file_name=file_kt.class_body.name + file_name, is_companion=file_kt.class_body.is_companion)

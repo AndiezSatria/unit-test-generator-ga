@@ -52,7 +52,7 @@ class GeneticAlgorithm():
                 class_parent_two: ClassParent = self.class_parents[rand_parent_two]
 
                 new_class_parent = ClassParent()
-                temp_branch_coverage = []
+                temp_coverage = []
                 for j in range(0, len(class_parent_one.parents)):
                     parent_one: Parent = class_parent_one.parents[j]
                     parent_two: Parent = class_parent_two.parents[j]
@@ -63,15 +63,15 @@ class GeneticAlgorithm():
                         parents_one=parent_one, parents_two=parent_two, fun_name=parent_one.tag, return_type=self.functions[j].return_value)
                     new_class_parent.parents.append(new_parent)
 
-                    branch_coverage, new_parent.branch = self.count_fitness(
+                    coverage, new_parent.branch = self.count_fitness(
                         parent=new_parent, class_parent=new_class_parent)
 
-                    new_parent.branch_coverage = branch_coverage
-                    temp_branch_coverage.append(branch_coverage)
+                    new_parent.coverage = coverage
+                    temp_coverage.append(coverage)
 
 
-                new_class_parent.branch_coverage = sum(
-                    temp_branch_coverage) / len(temp_branch_coverage)
+                new_class_parent.coverage = sum(
+                    temp_coverage) / len(temp_coverage)
                 self.child_class_parents.append(new_class_parent)
             self.class_parents.extend(self.child_class_parents)
             print("===========End of Cross Over=============")
@@ -85,9 +85,9 @@ class GeneticAlgorithm():
             best_parent = self.get_best_parent()
             k += 1
             for parent in best_parent.parents:
-                print("Branch Coverage", best_parent.branch_coverage)
-                print("Count Branch", len(parent.assertions))
-                if (best_parent.branch_coverage >= 0.85 and len(parent.assertions) <= parent.branch) or k == self.iteration:
+                print("Code Coverage", best_parent.coverage)
+                print("Count Branch / Predicate Note", len(parent.assertions))
+                if (best_parent.coverage >= 0.85 and len(parent.assertions) <= parent.branch) or k == self.iteration:
                     optimum = False
 
     def count_fitness(self, parent: Parent, class_parent: ClassParent) -> tuple[float, int]:
@@ -114,7 +114,7 @@ class GeneticAlgorithm():
         branch = int(branch_covered + branch_missed)
         instruction = int(instruction_covered + instruction_missed)
         coverage = float(instruction_covered) / float(instruction)
-        print("Branch Coverage", coverage)
+        print("Code Coverage", coverage)
         return coverage, branch
     
     def count_fitness_assert(self, parent: Parent, fun_name: str) -> float:
@@ -137,13 +137,13 @@ class GeneticAlgorithm():
 
         instruction = int(instruction_covered + instruction_missed)
         coverage = float(instruction_covered) / float(instruction)
-        print("Branch Coverage", coverage)
+        print("Code Coverage", coverage)
         return coverage
 
     def generate_class_parent(self):
         for _ in range(0, self.parent_count):
             class_parent = ClassParent()
-            temp_branch_coverage = []
+            temp_coverage = []
             for fun in self.functions:
                 # print("Generate Fun ", fun.name)
                 rand = random.randint(1, 50)
@@ -159,13 +159,13 @@ class GeneticAlgorithm():
                     parent.assertions.append(assertion)
 
                 class_parent.parents.append(parent)
-                branch_coverage, parent.branch = self.count_fitness(parent=parent, class_parent=class_parent)
+                coverage, parent.branch = self.count_fitness(parent=parent, class_parent=class_parent)
 
-                parent.branch_coverage = branch_coverage
-                temp_branch_coverage.append(branch_coverage)
+                parent.coverage = coverage
+                temp_coverage.append(coverage)
 
-            class_parent.branch_coverage = sum(
-                temp_branch_coverage) / len(temp_branch_coverage)
+            class_parent.coverage = sum(
+                temp_coverage) / len(temp_coverage)
             self.class_parents.append(class_parent)
 
     def cross_over(self, parents_one: Parent, parents_two: Parent, fun_name: str, return_type:str) -> Parent:
@@ -222,10 +222,10 @@ class GeneticAlgorithm():
 
                 new_parent.assertions.append(child)
                 coverage = self.count_fitness_assert(parent=new_parent, fun_name=fun_name)
-                if new_parent.branch_coverage >= coverage:
+                if new_parent.coverage >= coverage:
                     new_parent.assertions.remove(child)
                 
-                new_parent.branch_coverage = coverage
+                new_parent.coverage = coverage
                 if coverage == 1.0:
                     break
             print("New Child Assertions ", len(new_parent.assertions))
@@ -276,10 +276,10 @@ class GeneticAlgorithm():
                 
                 new_parent.assertions.append(child)
                 coverage = self.count_fitness_assert(parent=new_parent, fun_name=fun_name)
-                if new_parent.branch_coverage >= coverage:
+                if new_parent.coverage >= coverage:
                     new_parent.assertions.remove(child)
                 
-                new_parent.branch_coverage = coverage
+                new_parent.coverage = coverage
                 if coverage == 1.0:
                     break
             print("New Child Assertions ", len(new_parent.assertions))
@@ -288,7 +288,7 @@ class GeneticAlgorithm():
 
     def mutation(self):
         for class_parent in self.class_parents:
-            temp_branch_coverage = []
+            temp_coverage = []
             for j in range(0, len(class_parent.parents)):
                 for assertion in class_parent.parents[j].assertions:
                     for i in range(0, len(assertion.real)):
@@ -325,13 +325,13 @@ class GeneticAlgorithm():
                     else:
                         assertion.expected = expected
 
-                branch_coverage, class_parent.parents[j].branch = self.count_fitness(parent=class_parent.parents[j], class_parent=class_parent)
-                class_parent.parents[j].branch_coverage = branch_coverage
-                temp_branch_coverage.append(branch_coverage)
-            class_parent.branch_coverage = sum(temp_branch_coverage) / len(temp_branch_coverage)
+                coverage, class_parent.parents[j].branch = self.count_fitness(parent=class_parent.parents[j], class_parent=class_parent)
+                class_parent.parents[j].coverage = coverage
+                temp_coverage.append(coverage)
+            class_parent.coverage = sum(temp_coverage) / len(temp_coverage)
 
-    def sort_on_branch_coverage(self, class_parent: ClassParent):
-        return class_parent.branch_coverage
+    def sort_on_coverage(self, class_parent: ClassParent):
+        return class_parent.coverage
     
     def sort_on_len_of_assertion(self, class_parent: ClassParent):
         assertions = []
@@ -344,7 +344,7 @@ class GeneticAlgorithm():
         temp = []
         temp.extend(self.class_parents)
         temp.sort(key=self.sort_on_len_of_assertion, reverse=False)
-        temp.sort(key=self.sort_on_branch_coverage, reverse=True)
+        temp.sort(key=self.sort_on_coverage, reverse=True)
         self.class_parents = temp[:self.parent_count]
 
     def get_best_parent(self) -> ClassParent:
